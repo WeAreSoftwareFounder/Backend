@@ -49,7 +49,7 @@ app.use(express.json());
 app.use(express.static('public'));
 
 mongoose
-  .connect("mongodb+srv://kirkwilkinson:Mp7pc5cwrgprmSPt@myflix.yxlavss.mongodb.net/Myflix", {
+  .connect("mongodb+srv://kirkwilkinson:Mp7pc5cwrgprmSPt@myflix.yxlavss.mongodb.net/?retryWrites=true&w=majority", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
