@@ -87,7 +87,7 @@ app.post('/login', loginValidation, (req, res) => {
   // You can access the validated request body with req.body
   const { Username, Password } = req.body;
 
-  User.findOne()
+  User.findOne({ Username, Password })
     .then((user) => {
       if (!user || !user.validatePassword(Password)) {
         return res.status(401).json({ error: 'Invalid credentials' }); // Return an error object in JSON format
